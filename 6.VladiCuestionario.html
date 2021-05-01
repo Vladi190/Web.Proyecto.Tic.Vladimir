@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Cuestionario</title>
+<script>
+function resultado() {
+var p1, p2, p3, p4,p5, nota;
+
+<!-- 1ª pregunta -->
+if (document.getElementById('p11').checked==true) {p1=1}
+else {p1=0}
+<!-- 2ª pregunta -->
+if (document.getElementById('p22').checked==true) {p2=1}
+else {p2=0}
+<!-- 2ª pregunta -->
+if (document.getElementById('p32').checked==true) {p3=1}
+else {p3=0}
+<!-- 2ª pregunta -->
+if (document.getElementById('p42').checked==true) {p4=1}
+else {p4=0}
+<!-- 3ª pregunta -->
+if (document.getElementById('p53').checked==true) {p5=1}
+else {p5=0}
+
+
+nota=p1+p2+p3+p4+p5;
+alert(" Aciertos: " + nota);
+location.reload();
+}
+window.setInterval (BlinkIt, 500);
+var color = "nota";
+function BlinkIt () {
+var blink = document.getElementById ("blink");
+color = (color == "#ffffff")? "red" : "#ffffff";
+blink.style.color = color;
+blink.style.fontSize='36px';};
+
+</script>
+</head>
+<body>
+<h2>Cuestionario</h2>
+<hr>
+<form style="font:normal 16px sans-serif">
+<p>¿Cuanto mide la torre eiffel?</p>
+<p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta1" id="p11"> 300.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta1" id="p12"> 128.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta1" id="p13"> 500.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta1" id="p14"> 200.</p>
+
+<p>¿En que siglo acabo la guerra de sucesion española?(reponder con numeros romanos)</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta2" id="p21"> XVI.</p>
+<p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta2" id="p22"> XVIII.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta2" id="p23"> XV.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta2" id="p24"> XVII.</p>
+
+<p>¿Que cordillera separa Europa de Asia?</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta3" id="p31"> Los Pirineos.</p>
+<p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta3" id="p32"> Los Urales.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta3" id="p33"> Los Alpes.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta3" id="p34"> Carpatos.</p>
+
+<p>¿De qué estilo arquitectónico es la catedral de Notre Dame?.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta4" id="p41"> Romantico.</p>
+<p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta4" id="p42"> Gotico.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta4" id="p43"> Romanico.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta4" id="p44"> Renancentista.</p>
+
+<p>¿Qué país de África fue fundado en 1847 por esclavos americanos liberados?.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta4" id="p51"> Marruecos.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta4" id="p52"> Egipto.</p>
+<p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta4" id="p53"> Liberia.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta4" id="p54"> Sudafrica.</p>
+<hr>
+<p><input type="button" value=" Resultado" onclick="resultado()"/></p>
+</form>
+</body>
+</html>
